@@ -18,24 +18,18 @@ Ensure you have the following installed on your system:
     cd backend
     ```
 
-2. Create and activate a Python virtual environment:
-    ```bash
-    python -m venv venv
-    source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
-    ```
-
-3. Install the required dependencies:
+2. Install the required dependencies:
     ```bash
     pip install django djangorestframework
     ```
 
-4. Apply database migrations:
+3. Apply database migrations:
     ```bash
     python manage.py makemigrations
     python manage.py migrate
     ```
 
-5. Run the development server:
+4. Run the development server:
     ```bash
     python manage.py runserver
     ```
