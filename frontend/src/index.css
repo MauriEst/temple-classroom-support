@@ -1,68 +1,191 @@
+/* * =========================================
+ * 1. Global Setup & Variables
+ * =========================================
+*/
+
+/* Define your color palette and root font settings */
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
+  /* This is a standard "Temple Cherry" red. Adjust if you have the official one. */
+  --primary-color: #9d2235; 
+  --dark-color: #333333;
+  --light-color: #ffffff;
+  --bg-color: #f9f9f9;
+  --border-color: #cccccc;
+  
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+/* Universal box-sizing and body reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  margin: 0;
+  background-color: var(--bg-color);
+  color: var(--dark-color);
+}
+
+/* * =========================================
+ * 2. App-Level Components (Header/Footer)
+ * =========================================
+*/
+
+/* Main content wrapper (defined in App.tsx) */
+.main-content {
+  max-width: 1200px; /* Max width for your page content */
+  margin: 30px auto;  /* Center the content */
+  padding: 0 20px;    /* Add some horizontal padding */
+}
+
+.main-header {
+  background-color: var(--primary-color);
+  color: var(--light-color);
+  padding: 1rem 40px;
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  justify-content: space-between;
+  align-items: center;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.main-header .logo-container a {
+  color: var(--light-color);
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
-button {
+.main-header nav a {
+  color: var(--light-color);
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+.main-footer {
+  background-color: #222;
+  color: #ccc;
+  padding: 40px;
+  margin-top: 60px;
+  /* (You can add the flex/grid layout for columns later) */
+}
+
+/* * =========================================
+ * 3. Homepage-Specific Components
+ * =========================================
+*/
+
+.homepage-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: var(--dark-color);
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
   border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  margin-bottom: 30px;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.overview {
+  margin-bottom: 30px;
+}
+
+/* This is the 2-column layout */
+.support-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  gap: 30px; /* Space between the columns */
+}
+
+/* * =========================================
+ * 4. Individual Components
+ * =========================================
+*/
+
+/* The red info box on the left */
+.support-info-box {
+  background-color: var(--primary-color);
+  color: var(--light-color);
+  padding: 30px;
+  border-radius: 8px;
+}
+
+.support-info-box h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.support-info-box p,
+.support-info-box li {
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+}
+
+.support-info-box ul {
+  list-style-position: inside;
+  padding-left: 10px;
+  margin-bottom: 20px;
+}
+
+/* The "Link to Manan's page" button */
+.support-info-box .cta-link {
+  display: inline-block;
+  background-color: var(--light-color);
+  color: var(--primary-color);
+  padding: 12px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-top: 20px;
+  transition: all 0.2s ease;
+}
+
+.support-info-box .cta-link:hover {
+  opacity: 0.9;
+}
+
+/* The two buttons on the right */
+.action-buttons-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Base styles for both action buttons */
+.action-button-primary,
+.action-button-secondary {
+  display: flex; /* Using flex to center icon/text later */
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+/* Primary "Submit" button */
+.action-button-primary {
+  background-color: var(--primary-primary);
+  color: var(--light-color);
+}
+.action-button-primary:hover {
+  background-color: #7a1b2a; /* A slightly darker red */
+}
+
+/* Secondary "SLA" button */
+.action-button-secondary {
+  background-color: #f0f0f0;
+  color: var(--dark-color);
+  border: 1px solid var(--border-color);
+}
+.action-button-secondary:hover {
+  background-color: #e0e0e0;
 }
