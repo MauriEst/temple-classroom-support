@@ -148,7 +148,6 @@ body {
 }
 
 .nav-menu a.active {
-  background-color: var(--accent-color);
   font-weight: 500;
 }
 
