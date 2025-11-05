@@ -1,18 +1,28 @@
 import React from 'react';
 import { SupportInfo } from '../components/SupportInfo';
 import { ActionButtons } from '../components/ActionButtons';
+import { ImageCarousel } from '../components/ImageCarousel';
 
-// Use an existing asset to avoid build error when the original image is missing
-import classroomImageUrl from '../assets/react.svg'; 
+import classroomImage1 from '../assets/Tuttleman 304 1.png';
+// Import additional images here when you have them
+import classroomImage2 from '../assets/SERC 108A.jpg';
+import classroomImage3 from '../assets/Alter 602 edit.jpg';
+
+// Array of classroom images to display in the carousel
+const carouselImages = [
+  { url: classroomImage1, alt: "Tuttleman 304 classroom view" },
+  { url: classroomImage2, alt: "SERC 108A classroom view" },
+  { url: classroomImage3, alt: "Alter 602 classroom view" },
+  // Add more images
+];
 
 export const HomePage: React.FC = () => {
   return (
     <div className="homepage-container">
       <h1>Classroom Technology Support</h1>
-      <img 
-        src={classroomImageUrl} 
-        alt="University classroom" 
-        className="hero-image" 
+      <ImageCarousel 
+        images={carouselImages}
+        interval={5000} // Changes image every 5 seconds
       />
 
       <section className="overview">
