@@ -1,6 +1,5 @@
 import React from 'react';
-// We will create and import this component later
-// import { SupportForm } from '../components/SupportForm';
+import { SupportForm } from '../components/SupportForm'; // Import the new form
 
 export const SubmitPage: React.FC = () => {
   return (
@@ -8,8 +7,8 @@ export const SubmitPage: React.FC = () => {
       <h1>Submit a Classroom Technology Request</h1>
       <p>Please fill out this form to request help.</p>
       
-      {/* <SupportForm /> */}
-      <p>(Support form will go here)</p>
+      {/* This renders the form */}
+      <SupportForm /> 
     </div>
   );
 };
