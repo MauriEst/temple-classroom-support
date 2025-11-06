@@ -4,7 +4,6 @@ import { ActionButtons } from '../components/ActionButtons';
 import { ImageCarousel } from '../components/ImageCarousel';
 
 import classroomImage1 from '../assets/Tuttleman 304 1.png';
-// Import additional images here when you have them
 import classroomImage2 from '../assets/SERC 108A.jpg';
 import classroomImage3 from '../assets/Alter 602 edit.jpg';
 
@@ -13,7 +12,6 @@ const carouselImages = [
   { url: classroomImage1, alt: "Tuttleman 304 classroom view" },
   { url: classroomImage2, alt: "SERC 108A classroom view" },
   { url: classroomImage3, alt: "Alter 602 classroom view" },
-  // Add more images
 ];
 
 export const HomePage: React.FC = () => {
@@ -22,7 +20,7 @@ export const HomePage: React.FC = () => {
       <h1>Classroom Technology Support</h1>
       <ImageCarousel 
         images={carouselImages}
-        interval={5000} // Changes image every 5 seconds
+        interval={5000} // every 5 seconds
       />
 
       <section className="overview">

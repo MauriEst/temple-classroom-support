@@ -13,11 +13,6 @@ export const SupportInfo: React.FC = () => {
       </ul>
       <p>Email: ctshelp@temple.edu</p>
       <p>Phone: (215) 204-0797</p>
-      <p>Support is available for classrooms listed in the link below</p>
-      
-      <a href="#" className="cta-link">
-        Link to Manan's page &rarr;
-      </a>
     </div>
   );
 };

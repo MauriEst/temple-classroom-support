@@ -1,5 +1,5 @@
 import React from 'react';
-import { SupportForm } from '../components/SupportForm'; // Import the new form
+import { SupportForm } from '../components/SupportForm';
 
 export const SubmitPage: React.FC = () => {
   return (
