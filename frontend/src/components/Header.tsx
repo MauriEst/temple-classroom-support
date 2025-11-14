@@ -19,10 +19,12 @@ export const Header: React.FC = () => {
   return (
     <header className="main-header">
       <div className="logo-container">
-        {/* Or use an <img> tag for the university logo */}
-        <Link to="/">Temple Header</Link>
+        {/* Display Temple T logo from public folder */}
+        <Link to="/">
+          <img src="/Temple_T_logo.svg" alt="Temple University T Logo" style={{ height: '48px', width: 'auto', display: 'block' }} />
+        </Link>
       </div>
-    
+
       {/* Mobile: toggle button (three dots). Desktop: nav is visible. */}
       <div className="nav-controls" ref={menuRef}>
         <button

@@ -177,6 +177,46 @@ body {
   /* (You can add the flex/grid layout for columns later) */
 }
 
+/* Footer social icons */
+.social-icons {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+  align-items: center;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: transparent;
+  color: #fff;
+  transition: background 0.15s ease, transform 0.12s ease;
+}
+
+.social-link:hover {
+  background: rgba(255,255,255,0.06);
+  transform: translateY(-2px);
+}
+
+.social-svg {
+  width: 20px;
+  height: 20px;
+  display: block;
+  color: currentColor; /* use the parent's color */
+}
+
+.main-footer .social-link {
+  color: #ccc; /* neutral default on dark footer */
+}
+
+.main-footer .social-link:hover {
+  color: var(--primary-color); /* temple color on hover */
+}
+
 /* * =========================================
  * 3. Homepage-Specific Components
  * =========================================
